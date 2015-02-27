@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no" name="format-detection">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+<title>用户手册</title>
+<link rel="shortcut icon" href="img/ico.png">
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="css/animation.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			//Navigation
+			menu : false,
+			anchors : [ 'firstPage', 'secondPage', 'thirdPage', 'fourthPage' ],
+			navigation : false,
+			navigationPosition : 'right',
+			navigationTooltips : [ 'firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide' ],
+			slidesNavigation : false,
+			slidesNavPosition : 'bottom',
+
+			//Scrolling
+			css3 : true,
+			scrollingSpeed : 700,
+			autoScrolling : true,
+			scrollBar : false,
+			easing : 'easeInQuart',
+			easingcss3 : 'ease',
+			loopBottom : true,
+			loopTop : true,
+			loopHorizontal : true,
+			continuousVertical : false,
+			normalScrollElements : '#element1, .element2',
+			scrollOverflow : false,
+			touchSensitivity : 15,
+			normalScrollElementTouchThreshold : 5,
+
+			//Accessibility
+			keyboardScrolling : true,
+			animateAnchor : true,
+			recordHistory : true,
+
+			//Design
+			controlArrows : true,
+			verticalCentered : true,
+			resize : true,
+			sectionsColor : [ 'rgb(27, 188, 155)', 'rgb(75, 191, 195)', 'rgb(123, 170, 190)', 'rgb(189, 180, 223)' ],
+			paddingTop : '3em',
+			paddingBottom : '10px',
+			fixedElements : '#header, .footer',
+			responsive : 0,
+
+			//Custom selectors
+			sectionSelector : '.section',
+			slideSelector : '.slide',
+
+			//events
+			onLeave : function(index, nextIndex, direction) {
+			},
+			afterLoad : function(anchorLink, index) {
+			},
+			afterRender : function() {
+			},
+			afterResize : function() {
+			},
+			afterSlideLoad : function(anchorLink, index, slideAnchor, slideIndex) {
+			},
+			onSlideLeave : function(anchorLink, index, slideIndex, direction) {
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<section class="u-arrow-bottom">
+		<img src="images/arrow.png">
+	</section>
+	<div id="audio_btn" class="video_exist play_yinfu" style="display: block;">
+		<div id="yinfu" class="rotate"></div>
+		<audio loop="" src="music/demo.mp3" id="media" autoplay="" preload=""></audio>
+	</div>
+	<div id="fullpage">
+		<div class="section">Some section</div>
+		<div class="section">Some section</div>
+		<div class="section">Some section</div>
+		<div class="section">Some section</div>
+	</div>
+</body>
+</html>
